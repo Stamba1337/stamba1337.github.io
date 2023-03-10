@@ -71,8 +71,13 @@ section {
     transform: translateY(-100%) scale(0);
     transition: all .4s ease-in-out;
     background-color: var(--color-primary);
+    h2{
+        text-align: center;
+        margin: 0 auto;
+        font-size: 2rem;
+        text-transform: uppercase;
+    }
 }
-
 
 .active {
     display: block;
@@ -303,6 +308,8 @@ section {
                     .js { width: 30%; }
                     .csharp{ width: 75%; }
                     .unity{ width: 75%; }
+                    .pmg{ width: 50%; }
+                    .threed{ width: 75%; }
                     .python{ width: 50%; }
                 }
             }
@@ -379,7 +386,42 @@ section {
     padding: 2rem 0;
     text-align: center;
 }
+.contact-icons {
+    display: flex;
+    justify-content: center;
+    margin-top: 2rem;
+  }
 
+  .social-icons {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 20px;
+  }
+
+  .social-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100px;
+    height: 100px;
+    background-color: #454e56;
+    border-radius: 5px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    transition: transform 0.2s ease-in-out;
+  }
+
+  .social-icon i {
+    font-size: 3.5rem;
+    color: #fff;
+  }
+
+  .social-icon:hover {
+    transform: translateY(-5px);
+  }
+
+  .social-icon:hover i {
+    color: #27AE60;
+  }
 .portfolios {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -453,8 +495,13 @@ section {
 .contact-content-con {
     display: flex;
     padding-top: 3.5rem;
+    .right-contact{
+        margin-left: 5rem;
+        margin-right: 5rem;
+    }
     .left-contact {
         flex: 2;
+        margin-right: 6rem;
         h4 {
             margin-top: 1rem;
             font-size: 2rem;
@@ -488,100 +535,14 @@ section {
                 }
             }
         }
-
-        .contact-icon {
-            display: flex;
-            margin-top: 2rem;
-            a {
-                display: flex;
-                align-items: center;
-                color: var(--color-white);
-                background-color: var(--color-grey-5);
-                cursor: pointer;
-                justify-content: center;
-                width: 50px;
-                height: 50px;
-                border-radius: 50%;
-                margin: 0 .4rem;
-                transition: all .4s ease-in-out;
-                &:hover {
-                    background-color: var(--color-secondary);
-                    i { color: var(--color-primary); }
-                }
-                i {
-                    display: flex;
-                    align-items: center;
-                    justify-content: center;
-                    font-size: 1.3rem;
-                }
-            }
-        }
-    }
-
-    .right-contact {
-        flex: 3;
-        margin-left: 3rem;
-        .input-control {
-            margin: 1.5rem 0;
-            input, textarea {
-                border-radius: 30px;
-                font-weight: inherit;
-                font-size: inherit;
-                font-family: inherit;
-                padding: .8rem 1.1rem;
-                outline: none;
-                border: none;
-                background-color: var(--color-grey-5);
-                width: 100%;
-                color: var(--color-white);
-                resize: none;
-            }
-        }
-        .i-c-2 {
-            display: flex;
-            :last-child{
-                margin-left: 1.5rem;
-            }
-        }
-        .submit-btn {
-            display: flex;
-            justify-content: flex-start;
-        }
     }
 }
-
 
 /*Independed components*/
 .btn-con {
     display: flex;
     align-self: flex-start;
 }
-.submit-btn {
-    text-align: right;
-    margin-top: 10px;
-  }
-  
-.send-btn {
-    background-color: #27AE60;
-    color: #fff;
-    border: none;
-    padding: 12px 24px;
-    border-radius: 4px;
-    transition: all 0.2s ease;
-    font-size: 16px;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-  }
-  
-  .send-btn:hover {
-    background-color: #219653;
-  }
-  
-  .send-btn i {
-    margin-right: 10px;
-  }
-  
   
 .main-btn {
     border-radius: 30px;
