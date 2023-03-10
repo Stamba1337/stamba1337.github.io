@@ -578,6 +578,32 @@ section {
   align-self: flex-start;
 }
 
+.submit-btn {
+  text-align: right;
+  margin-top: 10px;
+}
+
+.send-btn {
+  background-color: #27AE60;
+  color: #fff;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 4px;
+  transition: all 0.2s ease;
+  font-size: 16px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+
+.send-btn:hover {
+  background-color: #219653;
+}
+
+.send-btn i {
+  margin-right: 10px;
+}
+
 .main-btn {
   border-radius: 30px;
   color: inherit;
