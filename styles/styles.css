@@ -534,7 +534,7 @@ section {
 }
 .contact-content-con .left-contact {
   flex: 2;
-  margin-right: 6rem;
+  text-align: center;
 }
 .contact-content-con .left-contact h4 {
   margin-top: 1rem;
@@ -719,20 +719,22 @@ section {
     padding-bottom: 6rem;
   }
   .contact-content-con {
+    display: flex;
     flex-direction: column;
+    align-items: center;
   }
   .contact-content-con .right-contact {
-    margin-left: 0;
     margin-top: 2.5rem;
   }
-  .contact-content-con .right-contact .i-c-2 {
+  .contact-content-con .right-contact .i-c-2 .left-contact {
+    display: flex;
     flex-direction: column;
+    align-items: center;
   }
-  .contact-content-con .right-contact .i-c-2 :last-child {
-    margin-left: 0;
+  .contact-content-con .right-contact .i-c-2 .left-contact :last-child {
     margin-top: 1.5rem;
   }
-  .contact-content-con .right-contact {
+  .contact-content-con .right-contact .left-contact {
     margin-bottom: 6rem;
   }
   .contact-item {
@@ -767,17 +769,17 @@ section {
     flex-direction: column;
   }
   .contact-content-con .right-contact {
-    margin-left: 0;
     margin-top: 2.5rem;
   }
-  .contact-content-con .right-contact .i-c-2 {
+  .contact-content-con .right-contact .i-c-2 .left-contact {
+    display: flex;
     flex-direction: column;
+    align-items: center;
   }
-  .contact-content-con .right-contact .i-c-2 :last-child {
-    margin-left: 0;
+  .contact-content-con .right-contact .i-c-2 .left-contact :last-child {
     margin-top: 1.5rem;
   }
-  .contact-content-con .right-contact {
+  .contact-content-con .right-contact .left-contact {
     margin-bottom: 6rem;
   }
   .main-title h2 .bg-text {
