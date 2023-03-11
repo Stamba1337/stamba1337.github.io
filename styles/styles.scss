@@ -41,6 +41,7 @@ body {
     font-size: 1.1rem;
     color: var(--color-white);
     transition: all .4s ease-in-out;
+    overflow: hidden;
 }
 
 a {
@@ -308,7 +309,7 @@ section {
                     .js { width: 30%; }
                     .csharp{ width: 75%; }
                     .unity{ width: 75%; }
-                    .pmg{ width: 50%; }
+                    .pmg{ width: 40%; }
                     .threed{ width: 75%; }
                     .python{ width: 30%; }
                 }
