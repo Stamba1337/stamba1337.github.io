@@ -41,8 +41,11 @@ body {
     font-size: 1.1rem;
     color: var(--color-white);
     transition: all .4s ease-in-out;
-    overflow: hidden;
 }
+
+body::-webkit-scrollbar{
+    display: none;
+  }
 
 a {
     display: inline-block;
