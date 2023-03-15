@@ -54,7 +54,7 @@ a {
     font-family: inherit;
 }
 
-header {
+.header {
     min-height: 100vh;
     color: var(--color-white);
     overflow: hidden;
@@ -64,15 +64,14 @@ header {
 section {
     min-height: 100vh;
     width: 100%;
-    position: absolute;
     left: 0;
     top: 0;
     padding: 3rem 18rem;
 }
 
 .container {
-    display: none;
-    transform: translateY(-100%) scale(0);
+
+
     transition: all .4s ease-in-out;
     background-color: var(--color-primary);
     h2{
@@ -85,8 +84,6 @@ section {
 
 .active {
     display: block;
-    animation: appear 1s ease-in-out;
-    transform: translateY(0) scaleY(1);
     @keyframes appear {
         0%{ transform: translateY(-100%) scaleY(0); }
         100%{ transform: translateY(0) scaleY(1); }
@@ -104,29 +101,38 @@ section {
     align-items: center;
     justify-content: center;
     transform: translateY(-50%);
-    .control{
+    
+    .control {
         padding: 1rem;
         cursor: pointer;
         background-color: var(--color-grey-4);
-        width: 55px;
-        height: 55px;
+        width: 60px;
+        height: 60px;
         border-radius: 20%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        margin: .7rem 0;
+        display: flex; /* Added */
+        justify-content: center; /* Added */
+        align-items: center; /* Added */
         box-shadow: var(--box-shadow-1) ;
+        
         i {
             font-size: 1.2rem;
             color: var(--color-grey-2);
             pointer-events: none;
         }
     }
+    
     .active-btn {
         background-color: var(--color-secondary);
         transition: all .4s ease-in-out;
         i { color: var(--color-white); }
     }
+}
+
+a.smooth-scroll {
+    margin: 5px;
+    display: block;
+    width: 60px;
+    height: 60px;
 }
 
 .theme-btn {
@@ -161,7 +167,7 @@ section {
         display: flex;
         align-items: center;
         position: relative;
-        .h-shape {
+        .shape {
             transition: all .4s ease-in-out;
             width: 65%;
             height: 100%;
@@ -169,12 +175,13 @@ section {
             position: absolute;
             left: 0;
             top: 0;
-            z-index: -1;
+            z-index: 1;
             clip-path: polygon(0 0, 46% 0, 79% 100%, 0% 100%);
         }
         .image {
+            z-index: 2;
             border-radius: var(--br-sm-2);
-            height: 90%;
+            height: 80%;
             width: 68%;
             margin-left: 4rem;
             background-color: var(--color-black);
@@ -198,7 +205,7 @@ section {
         justify-content: center;
         padding-right: 18rem;
         .name {
-            font-size: 3rem;
+            font-size: 2.2rem;
             span { color: var(--color-secondary); }
         }
         p {
@@ -542,8 +549,18 @@ section {
         }
     }
 }
-
+  
 /*Independed components*/
+
+
+
+.section-divider {
+    width: 80%;
+    height: 2px;
+    background-color: #2a2e35;;
+    margin: 3rem auto;
+  }
+  
 .btn-con {
     display: flex;
     align-self: flex-start;
@@ -598,17 +615,6 @@ section {
         font-size: 4rem;
         font-weight: 700;
         span { color: var(--color-secondary); }
-        .bg-text {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            color: var(--color-grey-5);
-            transition: all .4s ease-in-out;
-            z-index: -1;
-            transform: translate(-50%, -50%);
-            font-weight: 800;
-            font-size: 6.3rem;
-        }
     }
 }
 

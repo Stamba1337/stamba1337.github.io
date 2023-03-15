@@ -3,14 +3,27 @@
     button.addEventListener("click", function () {
       document.querySelector(".active-btn").classList.remove("active-btn");
       this.classList.add("active-btn");
-      document.querySelector(".active").classList.remove("active");
-      document.getElementById(button.dataset.id).classList.add("active");
     })
   });
   document.querySelector(".theme-btn").addEventListener("click", () => {
     document.body.classList.toggle("light-mode");
   })
 
+  const smoothScrollLinks = document.querySelectorAll('.smooth-scroll');
+
+  for (let link of smoothScrollLinks) {
+    link.addEventListener('click', function(e) {
+      e.preventDefault();
+      const target = document.querySelector(this.getAttribute('href'));
+      const options = {
+        behavior: 'smooth',
+        block: 'start',
+        inline: 'nearest'
+      }
+      target.scrollIntoView(options);
+    });
+  }
+  
   const birthdate = new Date('2004-09-16');
 
   // Calculate the age
