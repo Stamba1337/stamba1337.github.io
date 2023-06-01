@@ -1,13 +1,45 @@
 (function () {
-  [...document.querySelectorAll(".control")].forEach(button => {
+  const controls = document.querySelectorAll(".control");
+  const sections = document.querySelectorAll("section");
+
+  function setActiveButton() {
+    const scrollPosition = window.scrollY;
+    let activeSection = null;
+
+    sections.forEach((section) => {
+      const sectionTop = section.offsetTop - 50; // Adjust the offset if needed
+      const sectionHeight = section.offsetHeight;
+
+      if (scrollPosition >= sectionTop && scrollPosition < sectionTop + sectionHeight) {
+        activeSection = section.getAttribute("id");
+      }
+    });
+
+    controls.forEach((button) => {
+      const buttonId = button.getAttribute("data-id");
+
+      if (buttonId === activeSection) {
+        button.classList.add("active-btn");
+      } else {
+        button.classList.remove("active-btn");
+      }
+    });
+  }
+
+  window.addEventListener("scroll", setActiveButton);
+  setActiveButton();
+
+  controls.forEach((button) => {
     button.addEventListener("click", function () {
       document.querySelector(".active-btn").classList.remove("active-btn");
       this.classList.add("active-btn");
-    })
+    });
   });
+
   document.querySelector(".theme-btn").addEventListener("click", () => {
     document.body.classList.toggle("light-mode");
-  })
+  });
+
 
   const smoothScrollLinks = document.querySelectorAll('.smooth-scroll');
 

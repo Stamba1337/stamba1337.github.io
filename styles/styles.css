@@ -225,9 +225,10 @@ a.smooth-scroll {
   line-height: 2rem;
 }
 
-/*About*/
+/* About */
 .about-container {
   display: flex;
+  flex-wrap: wrap;
   padding-top: 3.5rem;
   padding-bottom: 5rem;
 }
@@ -244,7 +245,7 @@ a.smooth-scroll {
 }
 
 .about-item {
-  border: 1px solid var(--color-grey-5);
+  border: 1px solid var(--color-grey-4);
   flex: 1;
   background-color: var(--color-primary);
   border-radius: 10px;
@@ -253,10 +254,20 @@ a.smooth-scroll {
   flex-direction: column;
   height: 260px;
   position: relative;
-  width: 300px;
-  margin-right: 2rem; /* Add some space between the cards */
+  width: 100%; /* Adjusted to fill the width on smaller screens */
+  margin-bottom: 2rem; /* Add some space between the cards */
+  margin-left: 2rem;
+  margin-right: 1rem;
 }
 
+@media only screen and (min-width: 1024px) {
+  .about-container {
+    flex-wrap: nowrap;
+  }
+  .right-about {
+    margin-left: 2rem; /* Add some space between the left and right sections */
+  }
+}
 .about-item:hover::before {
   opacity: 1;
   border: 1px solid var(--color-secondary);
