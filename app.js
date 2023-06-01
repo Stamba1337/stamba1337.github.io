@@ -12,7 +12,7 @@
   const smoothScrollLinks = document.querySelectorAll('.smooth-scroll');
 
   for (let link of smoothScrollLinks) {
-    link.addEventListener('click', function(e) {
+    link.addEventListener('click', function (e) {
       e.preventDefault();
       const target = document.querySelector(this.getAttribute('href'));
       const options = {
@@ -23,7 +23,7 @@
       target.scrollIntoView(options);
     });
   }
-  
+
   const birthdate = new Date('2004-09-16');
 
   // Calculate the age
@@ -32,4 +32,15 @@
   // Update the HTML
   const ageElement = document.querySelector('.large-text');
   ageElement.textContent = age;
+  //light circle effect for about-item
+  document.getElementById("cards").onmousemove = e => {
+    for (const card of document.getElementsByClassName("about-item")) {
+      const rect = card.getBoundingClientRect(),
+        x = e.clientX - rect.left,
+        y = e.clientY - rect.top;
+
+      card.style.setProperty("--mouse-x", `${x}px`);
+      card.style.setProperty("--mouse-y", `${y}px`);
+    }
+  }
 })();
