@@ -7,7 +7,7 @@
     let activeSection = null;
 
     sections.forEach((section) => {
-      const sectionTop = section.offsetTop - 50; // Adjust the offset if needed
+      const sectionTop = section.offsetTop - 42; // Adjust the offset if needed
       const sectionHeight = section.offsetHeight;
 
       if (scrollPosition >= sectionTop && scrollPosition < sectionTop + sectionHeight) {
