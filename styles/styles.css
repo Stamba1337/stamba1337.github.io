@@ -194,7 +194,7 @@ a.smooth-scroll {
   transition: all 0.4s ease-in-out;
 }
 .header-content .left-header .image img {
-  width: 100%;
+  transform: translateX(-5%);
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
