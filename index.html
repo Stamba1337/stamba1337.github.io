@@ -2,6 +2,7 @@
 <html lang="en">
 
 <head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-..." crossorigin="anonymous" />
     <link rel="shortcut icon" type="image/png" href="img/tabicon.png" />
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -35,7 +36,10 @@
                         Software Developer | Game Developer | Storyteller.
                     </h1>
                     <p>
-                        Welcome to my portfolio! With a strong focus on game development, I bring a diverse skill set that includes proficiency in object-oriented programming (OOP) and familiarity with multiple programming languages. This allows me to approach my projects from different angles and adapt to varying requirements. Feel free to explore my portfolio.
+                        Welcome to my portfolio! With a strong focus on game development, I bring a diverse skill set
+                        that includes proficiency in object-oriented programming (OOP) and familiarity with multiple
+                        programming languages. This allows me to approach my projects from different angles and adapt to
+                        varying requirements. Feel free to explore my portfolio.
                     </p>
                 </div>
             </div>
@@ -47,30 +51,35 @@
             </div>
             <div class="about-container">
                 <div class="left-about">
-                  <h4>Information About me</h4>
-                  <p>
-                    I'm a passionate software developer who combines my love for game design and storytelling to create engaging experiences for players. Although I'm a junior developer with a couple of projects under my belt, I'm dedicated to delivering quality results. Collaboration is important to me, and I thrive both in teams and as an independent developer. Additionally, I have a good understanding of project management principles to ensure a satisfying user experience in the final product.
-                  </p>
+                    <h4>Information About me</h4>
+                    <p>
+                        I'm a passionate software developer who combines my love for game design and storytelling to
+                        create engaging experiences for players. Although I'm a junior developer with a couple of
+                        projects under my belt, I'm dedicated to delivering quality results. Collaboration is important
+                        to me, and I thrive both in teams and as an independent developer. Additionally, I have a good
+                        understanding of project management principles to ensure a satisfying user experience in the
+                        final product.
+                    </p>
                 </div>
                 <div class="right-about">
-                  <div id="cards" class="about-container">
-                    <div class="about-item">
-                      <div class="abt-text">
-                        <p class="large-text">{age}</p>
-                        <p class="small-text">years <br /> old</p>
-                        <div class="circle"></div>
-                      </div>
+                    <div id="cards" class="about-container">
+                        <div class="about-item">
+                            <div class="abt-text">
+                                <p class="large-text">{age}</p>
+                                <p class="small-text">years <br /> old</p>
+                                <div class="circle"></div>
+                            </div>
+                        </div>
+                        <div class="about-item">
+                            <div class="abt-text">
+                                <p class="large-text">4+</p>
+                                <p class="small-text">Years of <br /> academic experience</p>
+                            </div>
+                            <div class="circle"></div>
+                        </div>
                     </div>
-                    <div class="about-item">
-                      <div class="abt-text">
-                        <p class="large-text">4+</p>
-                        <p class="small-text">Years of <br /> academic experience</p>
-                      </div>
-                      <div class="circle"></div>
-                    </div>
-                  </div>
                 </div>
-              </div>
+            </div>
             <div class="about-stats">
                 <h4 class="stat-title">My Skills</h4>
                 <div class="progress-bars">
@@ -303,6 +312,22 @@
                                     <i class="fab fa-instagram"></i>
                                 </a>
                             </div>
+
+                        </div>
+                        <div>
+                            <h2>Send A Message</h2>
+                            <form action="https://formspree.io/f/mlekyvyd" method="POST" id="contact-form">
+                                <div class="inputBox">
+                                    <input type="email" name="email" required="required">
+                                    <span>Email</span>
+                                </div>
+                                <div class="inputBox">
+                                    <textarea name="message" required="required"></textarea>
+                                    <span>Message</span>
+                                </div>
+                                <button type="submit">Send</button>
+                                <div id="message-container"></div>
+                            </form>
                         </div>
                     </div>
                 </div>
