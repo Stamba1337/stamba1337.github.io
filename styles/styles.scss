@@ -115,11 +115,8 @@ section {
         height: 60px;
         border-radius: 20%;
         display: flex;
-        /* Added */
         justify-content: center;
-        /* Added */
         align-items: center;
-        /* Added */
         box-shadow: var(--box-shadow-1);
 
         i {
@@ -172,7 +169,7 @@ a.smooth-scroll {
     }
 }
 
-/*Header-content*/
+//Header-content
 .header-content {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -246,7 +243,7 @@ a.smooth-scroll {
     }
 }
 
-/* About */
+// About
 .about-container {
     display: flex;
     flex-wrap: wrap;
@@ -276,9 +273,7 @@ a.smooth-scroll {
     height: 260px;
     position: relative;
     width: 100%;
-    /* Adjusted to fill the width on smaller screens */
     margin-bottom: 2rem;
-    /* Add some space between the cards */
     margin-left: 2rem;
     margin-right: 1rem;
 }
@@ -290,7 +285,6 @@ a.smooth-scroll {
 
     .right-about {
         margin-left: 2rem;
-        /* Add some space between the left and right sections */
     }
 }
 
@@ -474,7 +468,7 @@ a.smooth-scroll {
     }
 }
 
-/*Timeline*/
+//Timeline
 .timeline {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -706,7 +700,6 @@ input:focus,
 textarea:focus {
     border-color: var(--color-secondary);
     outline: none;
-    /* Remove default focus outline */
 }
 
 .inputBox input:focus ~ span,
@@ -742,7 +735,7 @@ button {
     transition: transform 0.2s ease-in-out;
     font-weight: bold;
     margin-top: 10px;
-    margin-bottom: 50px;
+    margin-bottom: 1px;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
 }
 
@@ -761,8 +754,8 @@ button:hover {
 }
 
 .contact-container {
-    max-width: 1200px; /* Adjust the max-width as per your design */
-    margin: 0 auto; /* Center the container horizontally */
+    max-width: 1200px;
+    margin: 0 auto; 
 }
 
 .contact-content-con {
@@ -770,10 +763,11 @@ button:hover {
     padding-top: 3.5rem;
 
     .right-contact {
+        padding-bottom: 70px;
         flex: 1;
         margin: 0 1rem;
         @media (max-width: 576px) {
-            margin: 1rem 0; /* Adjust margin for smaller screens */
+            margin: 1rem 0; 
         }
     }
 
@@ -827,7 +821,7 @@ button:hover {
     }
 }
 
-/*Independed components*/
+//Independed components
 
 .section-divider {
     width: 80%;
