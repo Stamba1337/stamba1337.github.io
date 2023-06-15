@@ -205,6 +205,12 @@
     }
 }
 
+@media only screen and (max-width: 605px) {
+    .about-item {
+        flex-basis: calc(75% - 1rem);
+    }
+}
+
 @media screen and (max-width:1070px){
     .about-container{
         grid-template-columns: repeat(1, 1fr);
