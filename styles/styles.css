@@ -243,19 +243,15 @@ a.smooth-scroll {
 
 .about-container {
   display: flex;
-  flex-wrap: wrap;
   padding-top: 3.5rem;
   padding-bottom: 5rem;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: nowrap;
 }
 
 .about-cards {
-  display: flex;
-  flex-wrap: wrap;
   justify-content: space-evenly;
-}
-
-.left-about {
-  flex: 1;
 }
 
 .right-about {
@@ -816,6 +812,10 @@ button:hover {
 }
 
 @media screen and (max-width: 600px) {
+  .about-container {
+    grid-template-columns: repeat(1, 1fr);
+    flex-wrap: wrap;
+  }
   header {
     padding: 0 !important;
   }
@@ -826,6 +826,7 @@ button:hover {
   .header-content {
     grid-template-columns: repeat(1, 1fr);
     padding-bottom: 6rem;
+    padding-right: 0rem;
   }
   .right-header {
     grid-row: 1;
@@ -871,6 +872,7 @@ button:hover {
   .timeline {
     grid-template-columns: repeat(1, 1fr);
     padding-bottom: 6rem;
+    padding-left: 0%;
   }
   .about-stats .progress-bars {
     grid-template-columns: repeat(1, 1fr);
@@ -923,14 +925,8 @@ button:hover {
   .main-title h2 span {
     font-size: 2.3rem;
   }
-  .main-title h2 .bg-text {
-    font-size: 2.3rem;
-  }
 }
 @media screen and (max-width: 1432px) {
-  .container {
-    padding: 7rem 11rem;
-  }
   .contact-content-con {
     flex-direction: column;
   }
@@ -948,14 +944,6 @@ button:hover {
   .contact-content-con .right-contact .left-contact {
     margin-bottom: 6rem;
   }
-  .main-title h2 .bg-text {
-    font-size: 5.5rem;
-  }
-}
-@media (max-width: 1200px) {
-  .contact-container {
-    padding: 0 1rem;
-  }
 }
 @media screen and (max-width: 1250px) {
   .blogs {
@@ -967,6 +955,7 @@ button:hover {
   }
   .header-content .right-header {
     padding-right: 9rem;
+    padding-left: 9rem;
   }
 }
 @media screen and (max-width: 660px) {
@@ -988,7 +977,22 @@ button:hover {
     flex-basis: calc(75% - 1rem);
   }
 }
-@media screen and (max-width: 1070px) {
+@media screen and (max-width: 1280px) {
+  .header-content {
+    grid-template-columns: repeat(1, 1fr);
+    padding-bottom: 6rem;
+    padding-left: 5rem;
+  }
+  .shape {
+    width: 0% !important;
+  }
+}
+@media screen and (max-width: 1080px) {
+  .header-content {
+    grid-template-columns: repeat(1, 1fr);
+    padding-bottom: 6rem;
+    padding-left: 0rem;
+  }
   .about-container {
     grid-template-columns: repeat(1, 1fr);
   }
@@ -1001,20 +1005,18 @@ button:hover {
   .main-title h2 span {
     font-size: 4rem;
   }
-  .main-title h2 .bg-text {
-    font-size: 4.5rem;
-  }
 }
 @media screen and (max-width: 970px) {
   .container {
     padding: 7rem 6rem;
   }
   .about-container .left-about {
-    padding-right: 0rem;
+    padding-right: 4rem;
   }
   .header-content {
     grid-template-columns: repeat(1, 1fr);
     padding-bottom: 6rem;
+    padding-right: 4rem;
   }
   .left-header {
     display: flex;
@@ -1035,6 +1037,7 @@ button:hover {
   .right-header {
     grid-row: 1;
     padding-right: 0rem !important;
+    padding-left: 0rem !important;
     width: 90%;
     margin: 0 auto;
   }
@@ -1045,6 +1048,20 @@ button:hover {
   }
 }
 @media (max-width: 576px) {
+  .controls {
+    top: auto;
+    bottom: 0;
+    flex-direction: row;
+    justify-content: center;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    background-color: var(--color-grey-5);
+  }
+  .social-icons {
+    width: 100%;
+    grid-gap: 10px;
+  }
   .right-contact {
     flex: 1;
     margin: 0;
@@ -1073,8 +1090,5 @@ button:hover {
   }
   .main-title h2 span {
     font-size: 3rem;
-  }
-  .main-title h2 .bg-text {
-    font-size: 4rem;
   }
 }/*# sourceMappingURL=styles.css.map */

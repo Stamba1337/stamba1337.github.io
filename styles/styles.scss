@@ -262,19 +262,16 @@ a.smooth-scroll {
 // About
 .about-container {
     display: flex;
-    flex-wrap: wrap;
     padding-top: 3.5rem;
     padding-bottom: 5rem;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: nowrap;
 }
 .about-cards{
-    display: flex;
-    flex-wrap: wrap;
     justify-content: space-evenly;
 }
 
-.left-about {
-    flex: 1;
-}
 
 .right-about {
     margin-right: 2rem;
