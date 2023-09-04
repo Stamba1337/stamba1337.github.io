@@ -57,7 +57,26 @@
       target.scrollIntoView(options);
     });
   }
+  //loader
+  window.addEventListener('load', function () {
+    gsap.to("#cartridge", {
+      duration: 1.25,
+      y: "+=57",
+      onComplete: revealWebsite
+    });
 
+    function revealWebsite() {
+      gsap.to("#loader", {
+        duration: 0.5,
+        opacity: 0,
+        onComplete: () => {
+          document.getElementById("loader").style.display = "none";
+        }
+      });
+    }
+
+  });
+//documents
   document
     .getElementById("contact-form")
     .addEventListener("submit", function (event) {
