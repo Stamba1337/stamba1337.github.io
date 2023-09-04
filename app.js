@@ -120,24 +120,84 @@
     }
   }
 
-  // Calculate the age
-  const birthdate = new Date("2004-09-16");
-  const age = Math.floor(
-    (Date.now() - birthdate) / (365.25 * 24 * 60 * 60 * 1000)
-  );
+  document.addEventListener('DOMContentLoaded', function () {
 
-  // Update the HTML
-  const ageElement = document.querySelector(".large-text");
-  ageElement.textContent = age;
-  //light circle effect for about-item
-  document.getElementById("cards").onmousemove = (e) => {
-    for (const card of document.getElementsByClassName("about-item")) {
-      const rect = card.getBoundingClientRect(),
-        x = e.clientX - rect.left,
-        y = e.clientY - rect.top;
+    // Calculate the age logic
+    const birthdate = new Date("2004-09-16");
+    const age = Math.floor(
+      (Date.now() - birthdate) / (365.25 * 24 * 60 * 60 * 1000)
+    );
 
-      card.style.setProperty("--mouse-x", `${x}px`);
-      card.style.setProperty("--mouse-y", `${y}px`);
-    }
-  };
+    // Update the HTML
+    const ageElement = document.querySelector(".large-text");
+    ageElement.textContent = age;
+
+    // Light circle effect for about-item
+    document.getElementById("cards").onmousemove = (e) => {
+      for (const card of document.getElementsByClassName("about-item")) {
+        const rect = card.getBoundingClientRect(),
+          x = e.clientX - rect.left,
+          y = e.clientY - rect.top;
+
+        card.style.setProperty("--mouse-x", `${x}px`);
+        card.style.setProperty("--mouse-y", `${y}px`);
+      }
+    };
+
+    // Progress bars animation with Intersection Observer
+    const skillsSection = document.querySelector('.about-stats');
+    let animated = false;
+
+    const animateBars = (entries) => {
+      if (entries[0].isIntersecting && !animated) {
+        animated = true;
+
+        const progressTexts = document.querySelectorAll('.prog-text');
+        const progressBars = document.querySelectorAll('.progress span');
+
+        progressTexts.forEach((progText, index) => {
+          const finalPercent = parseInt(progText.textContent);
+          let currentPercent = 0;
+          let currentBarWidth = 0;
+
+          const barElement = progressBars[index];
+
+          const duration = 1500;
+          const textIncrement = 1;
+          const barIncrement = 0.5;
+          const textDelay = duration / finalPercent;
+          const barDelay = (duration / finalPercent) * barIncrement;
+
+          const updatePercentText = () => {
+            if (currentPercent <= finalPercent) {
+              progText.textContent = currentPercent + '%';
+              currentPercent += textIncrement;
+              setTimeout(updatePercentText, textDelay);
+            }
+          };
+
+          const updateBarWidth = () => {
+            if (currentBarWidth <= finalPercent) {
+              barElement.style.width = currentBarWidth + '%';
+              currentBarWidth += barIncrement;
+              setTimeout(updateBarWidth, barDelay);
+            } else if (currentBarWidth > finalPercent) {
+              barElement.style.width = finalPercent + '%';
+            }
+          };
+
+          updatePercentText();
+          updateBarWidth();
+        });
+      }
+    };
+
+
+    const observer = new IntersectionObserver(animateBars, {
+      threshold: 0.3
+    });
+
+    observer.observe(skillsSection);
+  });
+
 })();

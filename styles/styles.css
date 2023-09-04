@@ -374,32 +374,12 @@ a.smooth-scroll {
   left: 0;
   height: 100%;
   background-color: var(--color-secondary);
-  transition: all 0.4s ease-in-out;
-  width: 60%;
+  width: 0%;
 }
-.about-stats .progress-bars .progress-bar .progress-con .progress .html {
-  width: 80%;
-}
-.about-stats .progress-bars .progress-bar .progress-con .progress .css {
-  width: 50%;
-}
-.about-stats .progress-bars .progress-bar .progress-con .progress .js {
-  width: 30%;
-}
-.about-stats .progress-bars .progress-bar .progress-con .progress .csharp {
-  width: 75%;
-}
-.about-stats .progress-bars .progress-bar .progress-con .progress .unity {
-  width: 75%;
-}
-.about-stats .progress-bars .progress-bar .progress-con .progress .pmg {
-  width: 40%;
-}
-.about-stats .progress-bars .progress-bar .progress-con .progress .threed {
-  width: 75%;
-}
-.about-stats .progress-bars .progress-bar .progress-con .progress .python {
-  width: 30%;
+@keyframes fillUp {
+  from {
+    width: 0;
+  }
 }
 
 .stat-title {

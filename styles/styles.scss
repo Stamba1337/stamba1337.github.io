@@ -407,44 +407,18 @@ a.smooth-scroll {
                         left: 0;
                         height: 100%;
                         background-color: var(--color-secondary);
-                        transition: all 0.4s ease-in-out;
-                        width: 60%;
-                    }
+                        width: 0%; // Initially set to 0%
+                        //transition: width 2s ease-out; 
+                    }                    
 
-                    .html {
-                        width: 80%;
-                    }
-
-                    .css {
-                        width: 50%;
-                    }
-
-                    .js {
-                        width: 30%;
-                    }
-
-                    .csharp {
-                        width: 75%;
-                    }
-
-                    .unity {
-                        width: 75%;
-                    }
-
-                    .pmg {
-                        width: 40%;
-                    }
-
-                    .threed {
-                        width: 75%;
-                    }
-
-                    .python {
-                        width: 30%;
-                    }
+                    
                 }
             }
         }
+    }
+
+    @keyframes fillUp {
+        from { width: 0; }
     }
 }
 
