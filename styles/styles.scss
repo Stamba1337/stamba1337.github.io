@@ -249,6 +249,45 @@ a.smooth-scroll {
 
             span {
                 color: var(--color-secondary);
+                
+
+                // Typing Animation
+                display: inline-block;
+                overflow: hidden;
+                white-space: nowrap;
+                max-width: 0;
+                animation: typing 4s steps(25, end) 3s forwards, blink-caret .5s step-end 3s infinite; 
+
+                // Adding cursor using ::after
+                &::after {
+                    content: '|';  // Cursor character
+                    font-weight: bold;
+                    position: absolute;
+                    top: 50%;
+                    right: -0.2em;  // Adjust this as needed
+                    transform: translateY(-50%);  // Center vertically
+                    animation: blink 1s infinite;
+                }
+
+                // Keyframes for typing animation
+                @keyframes typing {
+                    from {
+                        max-width: 0;
+                    }
+                    to {
+                        max-width: 100%;
+                    }
+                }
+
+                // Keyframes for blinking cursor
+                @keyframes blink {
+                    0%, 100% {
+                        opacity: 0;
+                    }
+                    50% {
+                        opacity: 1;
+                    }
+                }
             }
         }
 

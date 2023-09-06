@@ -235,6 +235,36 @@ a.smooth-scroll {
 }
 .header-content .right-header .name span {
   color: var(--color-secondary);
+  display: inline-block;
+  overflow: hidden;
+  white-space: nowrap;
+  max-width: 0;
+  animation: typing 4s steps(25, end) 3s forwards, blink-caret 0.5s step-end 3s infinite;
+}
+.header-content .right-header .name span::after {
+  content: "|";
+  font-weight: bold;
+  position: absolute;
+  top: 50%;
+  right: -0.2em;
+  transform: translateY(-50%);
+  animation: blink 1s infinite;
+}
+@keyframes typing {
+  from {
+    max-width: 0;
+  }
+  to {
+    max-width: 100%;
+  }
+}
+@keyframes blink {
+  0%, 100% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
 }
 .header-content .right-header p {
   margin: 1.5rem 0;
