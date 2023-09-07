@@ -235,6 +235,8 @@ a.smooth-scroll {
 }
 .header-content .right-header .name span {
   color: var(--color-secondary);
+  position: relative;
+  vertical-align: middle;
   display: inline-block;
   overflow: hidden;
   white-space: nowrap;

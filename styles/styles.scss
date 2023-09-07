@@ -250,7 +250,8 @@ a.smooth-scroll {
             span {
                 color: var(--color-secondary);
                 
-
+                position: relative;
+                vertical-align: middle;
                 // Typing Animation
                 display: inline-block;
                 overflow: hidden;
